@@ -9,6 +9,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Посчитаю сумму цифр: ");
         String text = scanner.nextLine();
+        if(text.length() != 3){
+            System.out.println("Bad number! Must be 3 digital number");
+            return;
+        }
         int total = 0;
         for(int i = 0; i < text.length(); i++){
             total += parseInt(String.valueOf(text.toCharArray()[i]));
